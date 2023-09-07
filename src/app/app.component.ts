@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RecipeApp';
+  targetSection: string = 'recipe';
+
+  changeToRecipes() {
+this.targetSection = 'recipe'
+  }
+
+  changeToList() {
+    // console.log('works')
+    this.targetSection = 'list'
+  }
+
+
 }
