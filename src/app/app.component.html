@@ -1,12 +1,11 @@
-<app-header
-(changeToRecipes)="changeToRecipes()"
-(changeToList)="changeToList()"
-></app-header>
+<app-header  
+></app-header> 
 <div class="container">
   <div class="row">
     <div class="col-md-12"> 
-      <app-recipes *ngIf="targetSection === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="targetSection === 'list'"></app-shopping-list>
+      <!-- <app-recipes *ngIf="targetSection === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="targetSection === 'list'"></app-shopping-list> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

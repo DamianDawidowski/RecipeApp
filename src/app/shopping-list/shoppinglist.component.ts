@@ -17,8 +17,12 @@ constructor(private ingredientService: ingredientService) {}
 // }
 
 ngOnInit(): void {
-  this.ingredients = this.ingredientService.ingredients;
-  
+  this.ingredients = this.ingredientService.getIngredients();
+  this.ingredientService.ingredientsChanged
+  .subscribe(
+    (ingredients: Ingredient[]) => {
+      this.ingredients = ingredients;
+    })
 }
 
 

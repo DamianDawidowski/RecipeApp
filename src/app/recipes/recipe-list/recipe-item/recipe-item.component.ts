@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Recipe } from '../../recipe.model';
 import { recipesService } from 'src/app/shared/recipes.services';
+import { Ingredient } from 'src/app/shared/ingredient.model';
 
 @Component({
   selector: 'app-recipe-item',
@@ -8,15 +9,14 @@ import { recipesService } from 'src/app/shared/recipes.services';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent {
-  @Input('recipe') recipe: {name: string, description: string, imagePath: string}
-   constructor(private recipesService: recipesService) {}
+  constructor(private recipeService: recipesService) {}
+  @Input() index: number;
+  @Input() recipe: Recipe;
 
 
-  clickedRecipe() { 
-    this.recipesService.recipeSelected.emit(this.recipe)
-  }
-    
-
+    nOnInit() {
+   
+    }
 
 
 }

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,15 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Output() changeToRecipes = new EventEmitter<{targetSection: string}>();
-  @Output() changeToList = new EventEmitter<{targetSection: string}>();
+  
 
-  setToRecipes() {
-    this.changeToRecipes.emit({targetSection: 'recipe'})
-  }
-
-  setToList() { 
-    this.changeToList.emit({targetSection: 'list'})
-  }
-
+  constructor(private router: Router ) { }
+ 
+  
 }
+ 
