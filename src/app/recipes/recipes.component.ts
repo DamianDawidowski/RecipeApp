@@ -1,6 +1,5 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Recipe } from './recipe.model';
-import { recipesService } from '../shared/recipes.services';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-recipes',
@@ -8,17 +7,17 @@ import { recipesService } from '../shared/recipes.services';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent {
-  selectedRecipe: Recipe;
+  // selectedRecipe: Recipe;
   // @Input('recipeClicked_3') recipeDetail: {name: string, description: string, imagePath: string}
    
-   constructor(private recipesService: recipesService) {}
+   constructor() {}
    
    ngOnInit() {
-    this.recipesService.recipeSelected.subscribe(
-      (recipe: Recipe) => {
-        this.selectedRecipe = recipe
-      }
-    )
+    // this.recipesService.recipeSelected.subscribe(
+    //   (recipe: Recipe) => {
+    //     this.selectedRecipe = recipe
+    //   }
+    // )
    }
 
 

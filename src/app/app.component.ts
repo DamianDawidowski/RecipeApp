@@ -1,22 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'RecipeApp';
-  targetSection: string = 'recipe';
+export class AppComponent implements OnInit{ 
+  constructor(private authService: AuthService) {}
 
-  changeToRecipes() {
-this.targetSection = 'recipe'
+  ngOnInit() {
+    this.authService.autoLogin();
   }
-
-  changeToList() {
-    // console.log('works')
-    this.targetSection = 'list'
-  }
-
-
+  //set autologin in MAIN component!
 }
