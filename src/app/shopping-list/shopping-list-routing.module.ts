@@ -5,7 +5,7 @@ import { CommonModule } from "@angular/common";
  
 
 const appRoutesInList: Routes = [
-    { path: 'shopping-list', component: ShoppingListComponent}, 
+    { path: '', component: ShoppingListComponent}, 
 ]
  
 @NgModule({ 
