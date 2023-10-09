@@ -22,8 +22,8 @@ import { NgModule } from "@angular/core";
     imports: [
      CommonModule, 
     ], 
-    entryComponents: [
-    AlertComponent
-  ]
+  //   entryComponents: [
+  //   AlertComponent
+  // ]
 })
 export class SharedModule {}
